@@ -12,9 +12,15 @@
             price : 1090
         };
 
-        console.log(product);
+        console.log(typeof product);
         console.log(product.name);
         product.name = 'cotton socks';
+        console.log(product);
+
+        product.brand = 'nike';
+        console.log(product);
+
+        delete product.brand;
         console.log(product);
     </Script>
 </body>
