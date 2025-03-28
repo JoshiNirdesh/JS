@@ -4,17 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM projects</title>
+    <style>
+        .sub-btn{
+            border: none;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 50px ;
+            cursor: pointer;
+        }
+        .is-sub{
+            background-color: rgb(240, 240, 240);
+            color:black;
+        }
+        .cost-input{
+            font-size: 15px;
+            padding: 10px;
+        }
+        .cal-btn{
+            background-color: green;
+            color: white;
+            border: none;
+            font-size: 15px;
+            padding: 12px 15px;
+            cursor: pointer;
+        }
+       
+    </style>
 </head>
 <body>
 
     <p>Youtube Subscirbe button</p>
-    <button onclick="subscribe()" class="js-sub-btn">Subscribe</button>
+    <button onclick="subscribe()" class="js-sub-btn sub-btn">Subscribe</button>
 
     <p>Amazon Shipping Calculator</p>
     <p>Order under $40 - $10 shipping</p>
     <p>Order over $40 - Free Shipping</p>
-    <input type="text" placeholder="Cost of order" class="js-input">
-    <button onclick="calculateTotal()">Calculate</button>
+    <input type="text" placeholder="Cost of order" class="js-input cost-input">
+    <button onclick="calculateTotal()" class="cal-btn">Calculate</button>
     <p class="js-total"></p>
 
     <script>
@@ -32,9 +60,11 @@
 
             if(btn.innerHTML === 'Subscribe'){
                 btn.innerHTML = 'Subscribed';
+                btn.classList.add('is-sub');
             }
             else{
                 btn.innerHTML = 'Subscribe';
+                btn.classList.remove('is-sub');
             }
         }
     </script>
