@@ -46,13 +46,36 @@
       //    console.log(todolist[i]);
       // }
 
-      const nums = [1,1,3];
-      let total =0;
+      // const nums = [1,1,3];
+      // let total =0;
 
-      for(let i =0;i<nums.length;i++){
-         total = total +nums[i];
+      // for(let i =0;i<nums.length;i++){
+      //    total = total +nums[i];
+      // }
+      // console.log("Total",total);
+
+      // const nums = [10,20,30];
+      // console.log(nums);
+      // nums[2]=99;
+      // console.log(nums);
+
+      // getlastValue([1,10,20]);
+  
+      // function getlastValue(array){
+      //    let lastIndex = array.length -1;
+      //    console.log(array[lastIndex]);
+      // }
+
+      function arraySwap (array){
+         const firstIndex = array[0];
+         array[0]=array[array.length-1];
+         array[array.length-1]=firstIndex;
+         console.log(array);
       }
-      console.log("Total",total);
+      arraySwap([1,2,3,4]);
+      arraySwap(['hi','hello','good morning']);
+
+
     </script>
  </body>
  </html>
